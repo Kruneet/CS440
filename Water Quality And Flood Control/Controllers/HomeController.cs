@@ -13,18 +13,16 @@ namespace Water_Quality_And_Flood_Control.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+        public ActionResult SensorInterface()
+        {  
+                ViewBag.Message = "Your application description page";
+                return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult UserInterface()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+                ViewBag.Message = "Your contact page";
+                return View();
         }
     }
 }
