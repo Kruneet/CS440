@@ -22,8 +22,9 @@ namespace Water_Quality_And_Flood_Control.Controllers
 
         public ActionResult UserInterface()
         {
-                ViewBag.Message = "Your contact page";
-                return View();
+            ViewBag.Message = "Your contact page";
+            return View();
         }
+
     }
 }
