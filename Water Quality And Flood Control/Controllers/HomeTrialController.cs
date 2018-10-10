@@ -13,5 +13,17 @@ namespace Water_Quality_And_Flood_Control.Controllers
         {
             return View();
         }
+
+        // GET: Sensor Interface
+        public ActionResult SensorInterface()
+        {
+            return View();
+        }
+
+        // GET: User Interface
+        public ActionResult UserInterface()
+        {
+            return View();
+        }
     }
 }

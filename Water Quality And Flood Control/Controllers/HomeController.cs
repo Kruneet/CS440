@@ -16,6 +16,7 @@ namespace Water_Quality_And_Flood_Control.Controllers
         public ActionResult SensorInterface()
         {  
                 ViewBag.Message = "Your application description page";
+
                 return View();
         }
 

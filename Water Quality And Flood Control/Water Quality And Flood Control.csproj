@@ -194,6 +194,8 @@
     <Content Include="Views\Home\UserInterface.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\HomeTrial\Index.cshtml" />
+    <Content Include="Views\HomeTrial\SensorInterface.cshtml" />
+    <Content Include="Views\HomeTrial\UserInterface.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
