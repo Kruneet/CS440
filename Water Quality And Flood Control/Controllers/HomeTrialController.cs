@@ -25,5 +25,17 @@ namespace Water_Quality_And_Flood_Control.Controllers
         {
             return View();
         }
+
+        // GET: PublicUser Interface
+        public ActionResult PublicUser()
+        {
+            return View();
+        }
+
+        // GET: LaboratoryUser Interface
+        public ActionResult LaboratoryUser()
+        {
+            return View();
+        }
     }
 }
