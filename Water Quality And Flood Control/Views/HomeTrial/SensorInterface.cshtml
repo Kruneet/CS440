@@ -5,9 +5,13 @@
     ViewBag.Title = "SensorInterface";
 }
 
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+
 <div class=" Sensor Input Interface">
-    <h1>Sensor Input Interface </h1> <h1> 
-    <br />
+    <h1>Sensor Input Interface </h1> <h1>
+        <br />
 </div>
 
 <div class=" Dissolved Oxygen">
@@ -17,7 +21,9 @@
 
 
 <div class=" Temperature">
-    <h4>Temperature</h4> <h5> Units: °F (Fahrenheit) </h5><input id="temperature" type="text" />
+
+    <h4>Temperature</h4> <h5> Units: °F (Fahrenheit) </h5>
+    <input id="temperature" type="text" />
 </div>
 <br />
 
@@ -64,5 +70,5 @@
 
 
 <div class=" SUBMIT " Analysis>
-    <input id="SUBMIT" type="button" value="SUBMIT" />
+    <input id="SUBMIT" type="button" value="SUBMIT" onclick="jQuery.validate()" />
 </div>
