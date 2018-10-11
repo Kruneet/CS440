@@ -31,10 +31,10 @@ namespace Water_Quality_And_Flood_Control.Models
         public double DissolvedOxygen { get; set; }
 
         [Display(Name = "Radio Isotope Name")]
-        public double RadioIsotope { get; set; }
+        public String RadioIsotope { get; set; }
 
         [Display(Name = "Stable Isotope Name")]
-        public double StableIsotope { get; set; }
+        public String StableIsotope { get; set; }
 
         [Display(Name = "TimeStamp Of Data")]
         public DateTime TimeStamp { get; set; }
