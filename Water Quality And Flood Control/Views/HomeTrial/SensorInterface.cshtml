@@ -3,85 +3,129 @@
 
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 @{
     ViewBag.Title = "SensorInterface";
 }
 
+@model Water_Quality_And_Flood_Control.Models.SensorData
+
+
 
 
 <div class=" Sensor Input Interface">
-    <h1>Sensor Input Interface </h1> 
-        <br />
+    <h1>Sensor Input Interface </h1>
+    <br />
 </div>
 
-<div class=" Location">
-    <h4>Location</h4> <input id="location" type="text" />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>SensorData</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.AreaName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AreaName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AreaName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Resistance, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Resistance, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Resistance, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Voltage, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Voltage, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Voltage, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Temperature, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Temperature, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Temperature, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.pH, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.pH, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.pH, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DissolvedOxygen, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DissolvedOxygen, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DissolvedOxygen, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RadioIsotope, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.RadioIsotope, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.RadioIsotope, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.StableIsotope, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.StableIsotope, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.StableIsotope, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TimeStamp, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TimeStamp, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TimeStamp, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CurrentSpeed, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CurrentSpeed, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CurrentSpeed, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WaterLevel, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.WaterLevel, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.WaterLevel, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Home")
 </div>
-<br />
 
-
-
-<div class=" Dissolved Oxygen">
-    <h4>Dissolved Oxygen</h4> <h5> Units: mg/L </h5> <input id="dissolved oxygen" type="text" />
-</div>
-<br />
-
-
-<div class=" Temperature">
-    <h4>Temperature</h4> <h5> Units: °F (Fahrenheit) </h5><input id="temperature" type="text" />
-</div>
-<br />
-
-
-<div class=" pH Level of Water">
-    <h4>pH Level of Water</h4> <h5> Units: pH </h5><input id="pH" type="text" />
-</div>
-<br />
-
-
-<div class=" Radiochemical Isotopes">
-    <h4>Radiochemical Isotopes</h4> <h5> Units: Bq (Radioactive Transformation / seconds) </h5><input id="Radiochemical Isotopes" type="text" />
-</div>
-<br />
-
-
-<div class=" Stable Isotope Analysis">
-    <h4> Stable Isotopes Analysis</h4> <h5> Units: mol </h5><input id="Stable Isotopes" type="text" />
-</div>
-<br />
-
-
-<div class=" Resistance ">
-    <h4> Resistance </h4> <h5> Units: Ω (Ohms) </h5><input id="Resistance" type="text" />
-</div>
-<br />
-
-<div class=" Voltage ">
-    <h4> Voltage </h4> <h5> Units: V (Volts) </h5><input id="Voltage" type="text" />
-</div>
-<br />
-
-
-<div class=" Current Speed " Analysis>
-    <h4> Current Speed </h4> <h5> Units: secs (seconds) </h5><input id="Current Speed" type="text" />
-</div>
-<br />
-
-
-<div class=" Water Level " Analysis>
-    <h4> Water Level </h4> <h5> Units: cfs (cubic feet per seconds) </h5><input id="Water " type="text" />
-</div>
-<br />
-
-
-
-<div class=" Timestamp " Analysis>
-    <h4>Timestamp</h4> <h5> Units: secs (seconds) </h5><input id="Water " type="text" />
-</div>
-<br />
-
-
-
-<div class=" SUBMIT " Analysis>
-    <button onclick="alert('Validation Successful')">SUBMIT</button>
-</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
