@@ -26,13 +26,8 @@
         <h4>SensorData</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.AreaName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.AreaName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.AreaName, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        
+        
 
         <div class="form-group">
             @Html.LabelFor(model => model.Resistance, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -61,10 +56,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.pH, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PHValue, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.pH, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.pH, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.PHValue, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PHValue, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -77,18 +72,18 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.RadioIsotope, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.RadioIsotopeLevel, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.RadioIsotope, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.RadioIsotope, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.RadioIsotopeLevel, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.RadioIsotopeLevel, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.StableIsotope, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.StableIsotopeLvl, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.StableIsotope, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.StableIsotope, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.StableIsotopeLvl, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.StableIsotopeLvl, "", new { @class = "text-danger" })
             </div>
         </div>
 
