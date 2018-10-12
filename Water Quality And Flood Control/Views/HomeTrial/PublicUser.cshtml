@@ -31,6 +31,7 @@
 
         <dd>
             @Html.DisplayFor(model => model.Temperature)
+            @Html.Label("lblName", "unit", new { id = "" })
         </dd>
 
         <dt>
@@ -47,6 +48,7 @@
 
         <dd>
             @Html.DisplayFor(model => model.CurrentSpeed)
+            @Html.Label("lblName", "unit", new { id = "" })
         </dd>
 
         <dt>
@@ -55,6 +57,7 @@
 
         <dd>
             @Html.DisplayFor(model => model.WaterLevel)
+            @Html.Label("lblName", "unit", new { id = "" })
         </dd>
 
     </dl>
@@ -68,7 +71,7 @@
 <div>
     <h4>WARNING or ALL - CLEAR</h4>
     <hr />
-    <p><span style="color:red>"
+    <p>
         <h5>
 
             @if (Model.WaterLevel > 20 && Model.CurrentSpeed > 20)
@@ -88,7 +91,7 @@
                 @Html.DisplayName("ALL CLEAR");
             }
 
-        </h5></span>
+        </h5>
     </p>
 </div>
 <p></p>
