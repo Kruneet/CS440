@@ -68,28 +68,28 @@
 <div>
     <h4>WARNING or ALL - CLEAR</h4>
     <hr />
-    <p>
-    <h5>
+    <p><span style="color:red>"
+        <h5>
 
-        @if (Model.WaterLevel > 20 && Model.CurrentSpeed > 20)
-        {
-            @Html.DisplayName("FLASH FLOOD WARNING");
-        }
-        else if (Model.WaterLevel > 20 && Model.CurrentSpeed < 20)
-        {
-            @Html.DisplayName("FLOOD WARNING");
-        }
-        else if (Model.WaterLevel < 20 && Model.CurrentSpeed > 20)
-        {
-            @Html.DisplayName("WATER CURRENT TOO FAST. DONT GO SWIMMING, FISHING OR BOATING");
-        }
-        else if (Model.WaterLevel < 20 && Model.CurrentSpeed < 20)
-        {
-            @Html.DisplayName("ALL CLEAR");
-        }
-       
-    </h5>
-        </p>
+            @if (Model.WaterLevel > 20 && Model.CurrentSpeed > 20)
+            {
+                @Html.DisplayName("FLASH FLOOD WARNING");
+            }
+            else if (Model.WaterLevel > 20 && Model.CurrentSpeed < 20)
+            {
+                @Html.DisplayName("FLOOD WARNING");
+            }
+            else if (Model.WaterLevel < 20 && Model.CurrentSpeed > 20)
+            {
+                @Html.DisplayName("WATER CURRENT TOO FAST. DONT GO SWIMMING, FISHING OR BOATING");
+            }
+            else if (Model.WaterLevel < 20 && Model.CurrentSpeed < 20)
+            {
+                @Html.DisplayName("ALL CLEAR");
+            }
+
+        </h5></span>
+    </p>
 </div>
 <p></p>
 <hr />
