@@ -24,7 +24,20 @@ namespace Water_Quality_And_Flood_Control.Controllers
         // GET: Sensor Interface
         public ActionResult SensorInterface()
         {
-            var SensorInputInfo = new SensorData();
+            SensorData SensorInputInfo = new SensorData
+            {
+                AreaName = "Area 11",
+                Resistance = 4,
+                Voltage = 4,
+                Temperature = 32,
+                PHValue = 7,
+                DissolvedOxygen = 12,
+                RadioIsotopeLevel = "R Isotope",
+                StableIsotopeLevel = "S Isotope", 
+                TimeStamp = DateTime.Now,
+                CurrentSpeed = 20,
+                WaterLevel = 10
+            };
             return View(SensorInputInfo);
         }
 
