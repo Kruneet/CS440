@@ -25,7 +25,6 @@ namespace Water_Quality_And_Flood_Control.Controllers
         public ActionResult SensorInterface()
         {
             var SensorInputInfo = new SensorData();
-
             return View(SensorInputInfo);
         }
 

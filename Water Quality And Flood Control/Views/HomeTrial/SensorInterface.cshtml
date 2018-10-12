@@ -11,12 +11,11 @@
 @model Water_Quality_And_Flood_Control.Models.SensorData
 
 
-
-
 <div class=" Sensor Input Interface">
     <h1>Sensor Input Interface </h1>
     <br />
 </div>
+
 
 @using (Html.BeginForm())
 {
@@ -118,11 +117,13 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Submit" class="btn btn-default" />
+                <input type="submit" value="Submit" class="btn btn-default" id="cmdSubmit"/>
             </div>
         </div>
     </div>
 }
+
+
 
 <div>
     @Html.ActionLink("Back to List", "Home")
@@ -130,4 +131,27 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+<script>
+    var counter = 0;
+    var error_field = $(document).find("input.error");
+    //var area = $('#AreaName').val();
+  
+    $(document).ready(function () {
+        $("#cmdSubmit").click(function (event) {
+            event.preventDefault();
+            if ($("form").valid()) {
+                alert("Valid");
+                /* Add code for Ajax post */
+            }
+            else {
+                
+                counter = counter + 1;
+                if (counter > 5)
+                    alert($('#AreaName').val() + " Area Has Sensor Corrupted! Number of times Validation Failed: " + counter);
+            }
+
+        });
+    });
+</script>
+
 }
