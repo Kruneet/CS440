@@ -17,7 +17,7 @@ namespace Water_Quality_And_Flood_Control.Models
         public double Resistance { get; set; }
 
         [Display(Name = "Voltage")]
-        public int Voltage { get; set; }
+        public double Voltage { get; set; }
 
         [Range(30, 40)]
         [Display(Name = "Temperature")]
@@ -25,16 +25,16 @@ namespace Water_Quality_And_Flood_Control.Models
 
         [Range(0, 7)]
         [Display(Name = "pH")]
-        public int pH { get; set; }
+        public int PHValue { get; set; }
 
         [Display(Name = "Dissolved Oxygen")]
         public double DissolvedOxygen { get; set; }
 
         [Display(Name = "Radio Isotope Name")]
-        public String RadioIsotope { get; set; }
+        public String RadioIsotopeLevel { get; set; }
 
         [Display(Name = "Stable Isotope Name")]
-        public String StableIsotope { get; set; }
+        public String StableIsotopeLevel { get; set; }
 
         [Display(Name = "TimeStamp Of Data")]
         public DateTime TimeStamp { get; set; }
