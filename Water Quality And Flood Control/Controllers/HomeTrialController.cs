@@ -24,6 +24,9 @@ namespace Water_Quality_And_Flood_Control.Controllers
         // GET: Sensor Interface
         public ActionResult SensorInterface()
         {
+            //MOCK Sensor Input. The data passes from sensor to controller to view. 
+            //View Validates. 
+            //If Validation successful, then data passes from view to controller to database(insert).
             SensorData SensorInputInfo = new SensorData
             {
                 AreaName = "Area 11",
@@ -50,13 +53,40 @@ namespace Water_Quality_And_Flood_Control.Controllers
         // GET: PublicUser Interface
         public ActionResult PublicUser()
         {
-            return View();
+            //MOCK Value retrival from database. Data passes from database to controller to view.
+            SensorData PublicUserInfo = new SensorData
+            {
+                AreaName = "Area 21",
+                TimeStamp = DateTime.Now,
+                Temperature = 39,
+                PHValue = 5,
+                CurrentSpeed = 14,
+                WaterLevel = 13
+            };
+            return View(PublicUserInfo);
         }
 
         // GET: LaboratoryUser Interface
         public ActionResult LaboratoryUser()
         {
-            return View();
+            //MOCK Value retrival from database. Data passes from database to controller to view.
+            //View validates.
+            //If validation successfull, then data passes from view to controller to database(update).
+            SensorData LabUserInfo = new SensorData
+            {
+                AreaName = "Area 13",
+                TimeStamp = DateTime.Now,
+                Resistance = 11,
+                Voltage = 19,
+                Temperature = 39,
+                PHValue = 5,
+                DissolvedOxygen = 10,
+                RadioIsotopeLevel = "R2 Isotope",
+                StableIsotopeLevel = "S2 Isotope",
+                CurrentSpeed = 14,
+                WaterLevel = 13
+            };
+            return View(LabUserInfo);
         }
     }
 }

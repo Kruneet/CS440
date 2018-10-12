@@ -1,12 +1,14 @@
 ﻿@model Water_Quality_And_Flood_Control.Models.SensorData
 
 @{
-    ViewBag.Title = "PublicUser";
+    ViewBag.Title = "View";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<h2>View</h2>
+
 <div>
-    <h4>Display Data</h4>
+    <h4>SensorData</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -26,6 +28,22 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Resistance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resistance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Voltage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Voltage)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Temperature)
         </dt>
 
@@ -39,6 +57,30 @@
 
         <dd>
             @Html.DisplayFor(model => model.PHValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DissolvedOxygen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DissolvedOxygen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RadioIsotopeLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RadioIsotopeLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StableIsotopeLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StableIsotopeLevel)
         </dd>
 
         <dt>
@@ -59,47 +101,7 @@
 
     </dl>
 </div>
-<hr />
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-
-<div>
-    <h4>WARNING or ALL - CLEAR</h4>
-    <hr />
-    <p>
-    <h5>
-
-        @if (Model.WaterLevel > 20 && Model.CurrentSpeed > 20)
-        {
-            @Html.DisplayName("FLASH FLOOD WARNING");
-        }
-        else if (Model.WaterLevel > 20 && Model.CurrentSpeed < 20)
-        {
-            @Html.DisplayName("FLOOD WARNING");
-        }
-        else if (Model.WaterLevel < 20 && Model.CurrentSpeed > 20)
-        {
-            @Html.DisplayName("WATER CURRENT TOO FAST. DONT GO SWIMMING, FISHING OR BOATING");
-        }
-        else if (Model.WaterLevel < 20 && Model.CurrentSpeed < 20)
-        {
-            @Html.DisplayName("ALL CLEAR");
-        }
-       
-    </h5>
-        </p>
-</div>
-<p></p>
-<hr />
-<p></p>
 <p>
-    @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
-    @Html.ActionLink("Back to List", "UserInterface")
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>
-
-
-<div class=" OK " Analysis>
-    <input id="OK" type="button" value="OK" />
-</div>

@@ -198,6 +198,7 @@
     <Content Include="Views\HomeTrial\LaboratoryUser.cshtml" />
     <Content Include="Views\HomeTrial\Home.cshtml" />
     <Content Include="Views\SensorsData\Random.cshtml" />
+    <Content Include="Views\HomeTrial\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
