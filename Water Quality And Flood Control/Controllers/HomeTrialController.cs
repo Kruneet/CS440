@@ -27,6 +27,7 @@ namespace Water_Quality_And_Flood_Control.Controllers
             SensorData SensorInputInfo = new SensorData
             {
                 AreaName = "Area 11",
+                TimeStamp = DateTime.Now,
                 Resistance = 4,
                 Voltage = 4,
                 Temperature = 32,
@@ -34,7 +35,6 @@ namespace Water_Quality_And_Flood_Control.Controllers
                 DissolvedOxygen = 12,
                 RadioIsotopeLevel = "R Isotope",
                 StableIsotopeLevel = "S Isotope", 
-                TimeStamp = DateTime.Now,
                 CurrentSpeed = 20,
                 WaterLevel = 10
             };

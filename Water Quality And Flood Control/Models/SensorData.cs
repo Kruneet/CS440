@@ -13,6 +13,10 @@ namespace Water_Quality_And_Flood_Control.Models
         [Display(Name = "Name of Location")]
         public String AreaName { get; set; }
 
+        [Required]
+        [Display(Name = "TimeStamp Of Data")]
+        public DateTime TimeStamp { get; set; }
+
         [Display(Name = "Resistance")]
         public double Resistance { get; set; }
 
@@ -35,9 +39,6 @@ namespace Water_Quality_And_Flood_Control.Models
 
         [Display(Name = "Stable Isotope Name")]
         public String StableIsotopeLevel { get; set; }
-
-        [Display(Name = "TimeStamp Of Data")]
-        public DateTime TimeStamp { get; set; }
 
         [Display(Name = "Current Speed")]
         public double CurrentSpeed { get; set; }
