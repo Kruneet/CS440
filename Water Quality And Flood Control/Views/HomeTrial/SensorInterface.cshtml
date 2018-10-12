@@ -46,7 +46,7 @@
         <div class="col-md-10">
             @Html.EditorFor(model => model.Resistance, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Resistance, "", new { @class = "text-danger" })
-            @Html.Label("lblName", "unit", new { id = "" })
+            @Html.Label("lblName", "Ohms", new { id = "" })
         </div>
     </div>
 
@@ -55,7 +55,7 @@
         <div class="col-md-10">
             @Html.EditorFor(model => model.Voltage, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Voltage, "", new { @class = "text-danger" })
-            <label for="VoltageUnit">unit</label>
+            <label for="VoltageUnit">Volts</label>
         </div>
     </div>
 
@@ -64,6 +64,7 @@
         <div class="col-md-10">
             @Html.EditorFor(model => model.Temperature, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Temperature, "", new { @class = "text-danger" })
+            @Html.Label("lblName", "°C", new { id = "" })
         </div>
     </div>
 
@@ -72,6 +73,7 @@
         <div class="col-md-10">
             @Html.EditorFor(model => model.PHValue, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.PHValue, "", new { @class = "text-danger" })
+
         </div>
     </div>
 
@@ -80,6 +82,7 @@
         <div class="col-md-10">
             @Html.EditorFor(model => model.DissolvedOxygen, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.DissolvedOxygen, "", new { @class = "text-danger" })
+            @Html.Label("lblName", "ppm", new { id = "" })
         </div>
     </div>
 
@@ -88,6 +91,7 @@
         <div class="col-md-10">
             @Html.EditorFor(model => model.RadioIsotopeLevel, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.RadioIsotopeLevel, "", new { @class = "text-danger" })
+            @Html.Label("lblName", "ppm", new { id = "" })
         </div>
     </div>
 
@@ -96,6 +100,7 @@
         <div class="col-md-10">
             @Html.EditorFor(model => model.StableIsotopeLevel, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.StableIsotopeLevel, "", new { @class = "text-danger" })
+            @Html.Label("lblName", "ppm", new { id = "" })
         </div>
     </div>
 
@@ -104,6 +109,7 @@
         <div class="col-md-10">
             @Html.EditorFor(model => model.CurrentSpeed, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.CurrentSpeed, "", new { @class = "text-danger" })
+            @Html.Label("lblName", "M/s", new { id = "" })
         </div>
     </div>
 
@@ -112,6 +118,7 @@
         <div class="col-md-10">
             @Html.EditorFor(model => model.WaterLevel, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.WaterLevel, "", new { @class = "text-danger" })
+            @Html.Label("lblName", "Feet", new { id = "" })
         </div>
     </div>
 
