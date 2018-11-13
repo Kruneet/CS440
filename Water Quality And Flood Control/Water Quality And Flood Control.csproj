@@ -166,6 +166,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\layers-2x.png" />
+    <Content Include="Content\images\layers.png" />
+    <Content Include="Content\images\marker-icon-2x.png" />
+    <Content Include="Content\images\marker-icon.png" />
+    <Content Include="Content\images\marker-shadow.png" />
+    <Content Include="Content\leaflet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -185,6 +191,10 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\leaflet-src.esm.js" />
+    <Content Include="Scripts\leaflet-src.js" />
+    <Content Include="Scripts\Leaflet.Control.Custom.js" />
+    <Content Include="Scripts\leaflet.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="WeatherAPI.aspx" />
     <Content Include="Web.config" />
@@ -204,6 +214,10 @@
     <Content Include="Views\HomeTrial\PublicUser.cshtml" />
     <Content Include="Views\HomeTrial\LaboratoryUser.cshtml" />
     <Content Include="Views\HomeTrial\Home.cshtml" />
+    <Content Include="Views\HomeTrial\MapsLeaflet.cshtml" />
+    <Content Include="Scripts\leaflet-src.esm.js.map" />
+    <Content Include="Scripts\leaflet-src.js.map" />
+    <Content Include="Scripts\leaflet.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
