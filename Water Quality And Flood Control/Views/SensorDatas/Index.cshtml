@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Water_Quality_And_Flood_Control.Controllers.SensorData>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Resistance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Voltage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Temperature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PHValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DissolvedOxygen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RadioIsotopeLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StableIsotopeLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentSpeed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WaterLevel)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resistance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Voltage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Temperature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PHValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DissolvedOxygen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RadioIsotopeLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StableIsotopeLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentSpeed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WaterLevel)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

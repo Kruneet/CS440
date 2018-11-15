@@ -15,6 +15,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Water Quality And Flood Detection System", "Index", "HomeTrial/Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
@@ -24,6 +25,7 @@
                     <li>@Html.ActionLink("Sensor Interface", "SensorInterface", "HomeTrial")</li>
                     <li>@Html.ActionLink("User Interface", "UserInterface", "HomeTrial")</li>
                     <li>@Html.ActionLink("Index Of Pages", "Index", "HomeTrial")</li>
+                    <li>@Html.ActionLink("Admin View", "AdminView", "HomeTrial")</li>
                 </ul>
             </div>
         </div>
@@ -32,7 +34,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now - My ASP.NET Application</p>
         </footer>
     </div>
 

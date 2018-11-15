@@ -1,0 +1,91 @@
+﻿@model Water_Quality_And_Flood_Control.Controllers.SensorData
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SensorData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Resistance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resistance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Voltage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Voltage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Temperature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Temperature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PHValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DissolvedOxygen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DissolvedOxygen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RadioIsotopeLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RadioIsotopeLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StableIsotopeLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StableIsotopeLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentSpeed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentSpeed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WaterLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WaterLevel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

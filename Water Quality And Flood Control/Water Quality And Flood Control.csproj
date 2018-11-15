@@ -157,8 +157,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeTrialController.cs" />
     <Compile Include="Controllers\LocationData.cs" />
+    <Compile Include="Controllers\LocationDatasController.cs" />
     <Compile Include="Controllers\SensorData.cs" />
+    <Compile Include="Controllers\SensorDatasController.cs" />
     <Compile Include="Controllers\UserData.cs" />
+    <Compile Include="Controllers\UserDatasController.cs" />
     <Compile Include="Controllers\WQAFDS_System.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -233,6 +236,22 @@
     <Content Include="Scripts\leaflet-src.esm.js.map" />
     <Content Include="Scripts\leaflet-src.js.map" />
     <Content Include="Scripts\leaflet.js.map" />
+    <Content Include="Views\SensorDatas\Create.cshtml" />
+    <Content Include="Views\SensorDatas\Delete.cshtml" />
+    <Content Include="Views\SensorDatas\Details.cshtml" />
+    <Content Include="Views\SensorDatas\Edit.cshtml" />
+    <Content Include="Views\SensorDatas\Index.cshtml" />
+    <Content Include="Views\LocationDatas\Create.cshtml" />
+    <Content Include="Views\LocationDatas\Delete.cshtml" />
+    <Content Include="Views\LocationDatas\Details.cshtml" />
+    <Content Include="Views\LocationDatas\Edit.cshtml" />
+    <Content Include="Views\LocationDatas\Index.cshtml" />
+    <Content Include="Views\UserDatas\Create.cshtml" />
+    <Content Include="Views\UserDatas\Delete.cshtml" />
+    <Content Include="Views\UserDatas\Details.cshtml" />
+    <Content Include="Views\UserDatas\Edit.cshtml" />
+    <Content Include="Views\UserDatas\Index.cshtml" />
+    <Content Include="Views\HomeTrial\AdminView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
