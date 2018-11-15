@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Water_Quality_And_Flood_Control.Models;
+using Water_Quality_And_Flood_Control.Controllers;
 
 namespace Water_Quality_And_Flood_Control.Controllers
 {
+    [HandleError]
     public class HomeTrialController : Controller
     {
+        
+
         // GET: HomeTrial
         public ActionResult Index()
         {
@@ -25,9 +28,9 @@ namespace Water_Quality_And_Flood_Control.Controllers
         // GET: Sensor Interface
         public ActionResult SensorInterface()
         {
-            //MOCK Sensor Input. The data passes from sensor to controller to view. 
-            //View Validates. 
-            //If Validation successful, then data passes from view to controller to database(insert).
+            //MOCK Sensor Input. The data passes from sensor/API to controller(this) to view(SensorInterface). 
+            //View Validates . 
+            //If Validation successful, then data passes from view(SensorInterface) to controller(this) to database(Controller/SensorData --> SE_CodingProject).
             SensorData SensorInputInfo = new SensorData
             {
                 AreaName = "Area 11",
@@ -54,7 +57,8 @@ namespace Water_Quality_And_Flood_Control.Controllers
         // GET: PublicUser Interface
         public ActionResult PublicUser()
         {
-            //MOCK Value retrival from database. Data passes from database to controller to view.
+            //MOCK Value retrival from database(/Controller/SensorData and LocationData  ---> SE_CodingProject). 
+            //Data passes from database(SE_CodingProject) to controller(this) to view(PublicUser).
             SensorData PublicUserInfo = new SensorData
             {
                 AreaName = "Area 21",
@@ -70,9 +74,10 @@ namespace Water_Quality_And_Flood_Control.Controllers
         // GET: LaboratoryUser Interface
         public ActionResult LaboratoryUser()
         {
-            //MOCK Value retrival from database. Data passes from database to controller to view.
-            //View validates.
-            //If validation successfull, then data passes from view to controller to database(update).
+            //MOCK Value retrival from database(/controller/SensorData ---> SE_CodingProject). 
+            //Data passes from database(SE_CodingProject) to controller to view(LaboratoryUser).
+            //View validates(LaboratoryUser).
+            //If validation successfull, then data passes from view(LaboratoryUser) to controller(this) to database(/Controller/SensorData --> SE_CodingProject).
             SensorData LabUserInfo = new SensorData
             {
                 AreaName = "Area 13",
