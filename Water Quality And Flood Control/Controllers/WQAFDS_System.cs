@@ -72,11 +72,11 @@ namespace Water_Quality_And_Flood_Control.Controllers
 
             modelBuilder.Entity<LocationData>()
                 .Property(e => e.Latitude)
-                .HasPrecision(10, 10);
+                .HasPrecision(14, 8);
 
             modelBuilder.Entity<LocationData>()
                 .Property(e => e.Longitude)
-                .HasPrecision(10, 10);
+                .HasPrecision(14, 8);
         }
     }
 }
