@@ -293,6 +293,7 @@
     <Content Include="Views\HomeTrial\PublicUserLandingPage.cshtml">
       <BrowseToURL>~/HomeTrial/PublicUserLandingPage</BrowseToURL>
     </Content>
+    <Content Include="Views\HomeTrial\LabGraphReportGen.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

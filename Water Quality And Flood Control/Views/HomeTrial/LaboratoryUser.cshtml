@@ -7,13 +7,13 @@
 }
 
 
-@model Water_Quality_And_Flood_Control.Models.SensorData
 
-
-<div class=" Sensor Input Interface">
-    <h1>Sensor Input Interface </h1>
+<div class="Sensor Input Interface">
+    <h1>Laboratory User Input Interface </h1>
     <br />
 </div>
+
+@model Water_Quality_And_Flood_Control.Controllers.SensorData
 
 
 @using (Html.BeginForm())
@@ -24,28 +24,16 @@
         <h4>SensorData</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.AreaName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.AreaName, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
-                @Html.ValidationMessageFor(model => model.AreaName, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        @Html.HiddenFor(model => model.AreaName)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.TimeStamp, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TimeStamp, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
-                @Html.ValidationMessageFor(model => model.TimeStamp, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        @Html.HiddenFor(model => model.TimeStamp)
 
         <div class="form-group">
             @Html.LabelFor(model => model.Resistance, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Resistance, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Resistance, "", new { @class = "text-danger" })
-                @Html.Label("lblName", "unit", new { id = "" })
+                @Html.Label("lblName", "Ohms", new { id = "" })
             </div>
         </div>
 
@@ -54,16 +42,16 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Voltage, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Voltage, "", new { @class = "text-danger" })
-                <label for="VoltageUnit">unit</label>
+                <label for="VoltageUnit">Volts</label>
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Temperature, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Temperature, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.EditorFor(model => model.Temperature, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Temperature, "", new { @class = "text-danger" })
-                @Html.Label("lblName", "unit", new { id = "" })
+                @Html.Label("lblName", "°C", new { id = "" })
             </div>
         </div>
 
@@ -80,7 +68,7 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DissolvedOxygen, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.DissolvedOxygen, "", new { @class = "text-danger" })
-                @Html.Label("lblName", "unit", new { id = "" })
+                @Html.Label("lblName", "ppm", new { id = "" })
             </div>
         </div>
 
@@ -89,6 +77,7 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.RadioIsotopeLevel, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.RadioIsotopeLevel, "", new { @class = "text-danger" })
+                @Html.Label("lblName", "ppm", new { id = "" })
             </div>
         </div>
 
@@ -97,36 +86,39 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.StableIsotopeLevel, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.StableIsotopeLevel, "", new { @class = "text-danger" })
+                @Html.Label("lblName", "ppm", new { id = "" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.CurrentSpeed, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CurrentSpeed, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.EditorFor(model => model.CurrentSpeed, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CurrentSpeed, "", new { @class = "text-danger" })
-                @Html.Label("lblName", "unit", new { id = "" })
+                @Html.Label("lblName", "M/s", new { id = "" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.WaterLevel, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.WaterLevel, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                @Html.EditorFor(model => model.WaterLevel, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.WaterLevel, "", new { @class = "text-danger" })
-                @Html.Label("lblName", "unit", new { id = "" })
+                @Html.Label("lblName", "Feet", new { id = "" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Submit" class="btn btn-default" id="cmdSubmit" />
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-
+    <div>
+        @Html.ActionLink("Generate Graphical Report", "LabGraphReportGen")
+    </div>
 
 <div>
     @Html.ActionLink("Back to List", "UserInterface")
@@ -147,14 +139,18 @@
                     /* Add code for Ajax post */
                 }
                 else {
-                    alert("InValid Data");
-                    //counter = counter + 1;
-                    //if (counter > 5)
-                    //    alert($('#AreaName').val() + " Area Has Sensor Corrupted! Number of times Validation Failed: " + counter);
+
+                    counter = counter + 1;
+                    if (counter > 5)
+                        alert($('#AreaName').val() + " Area Has Sensor Corrupted! Number of times Validation Failed: " + counter);
                 }
 
             });
         });
     </script>
-
 }
+
+
+
+
+

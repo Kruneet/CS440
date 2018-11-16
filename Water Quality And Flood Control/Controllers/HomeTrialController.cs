@@ -65,6 +65,12 @@ namespace Water_Quality_And_Flood_Control.Controllers
         }
 
         // GET: Public User Landing Page
+        public ActionResult LabGraphReportGen()
+        {
+            return View();
+        }
+
+        // GET: Public User Landing Page
         public ActionResult PublicUserLandingPage()
         {
             return View();

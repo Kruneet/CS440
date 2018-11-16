@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = "LaboratoryUser";
+}
+
+
+
+<div class="Sensor Input Interface">
+    <h1>Generate Graphical Report Interface </h1>
+    <br />
+</div>
+
+@model Water_Quality_And_Flood_Control.Controllers.SensorData
+
+<table class="table">
+    <tr>
+        <th width=200px; height=200px><img src="@Url.Action("drawTempGraph")" /></th>
+        <th width=200px; height=200px><img src="@Url.Action("drawpHGraph")" /></th>
+        <th width=200px; height=200px><img src="@Url.Action("drawO2Graph")" /></th>
+        <th width=200px; height=200px><img src="@Url.Action("drawWaterLevelGraph")" /></th>
+        <th width=200px; height=200px><img src="@Url.Action("drawCurrentGraph")" /></th>
+    </tr>
+</table>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Download" class="btn btn-default" />
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Back to Laboratory User Main Page", "LaboratoryUserLandingPage")
+</div>
