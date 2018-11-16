@@ -166,6 +166,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\LocationData.cs">
+      <DependentUpon>Osm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Osm.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Osm.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Osm.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Osm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Osm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Osm.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WeatherAPI.aspx.cs">
       <DependentUpon>WeatherAPI.aspx</DependentUpon>
@@ -194,10 +212,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Osm.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Osm.edmx</DependentUpon>
+      <LastGenOutput>Osm.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Osm.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Osm.edmx</DependentUpon>
+      <LastGenOutput>Osm.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\Osm.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Osm.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Osm.edmx.diagram">
+      <DependentUpon>Osm.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -259,9 +294,7 @@
       <BrowseToURL>~/HomeTrial/PublicUserLandingPage</BrowseToURL>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -274,6 +307,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

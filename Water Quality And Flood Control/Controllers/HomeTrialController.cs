@@ -30,6 +30,11 @@ namespace Water_Quality_And_Flood_Control.Controllers
             return View();
         }
 
+        public ActionResult MapsLeaflet()
+        {
+            return View();
+        }
+
         // GET: Sensor Interface
         public ActionResult SensorInterface()
         {

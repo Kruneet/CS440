@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SE_CodingProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\CPVIR\SOURCE\REPOS\WATER QUALITY AND FLOOD CONTROL\WATER QUALITY AND FLOOD CONTROL\APP_DATA\SE_CODINGPROJECT.MDF.dbo.LocationData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="LocationData">
+          <Key>
+            <PropertyRef Name="AreaName" />
+          </Key>
+          <Property Name="AreaName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="latitude" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="longitude" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Description" Type="varchar" MaxLength="350" />
+          <Property Name="Location" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityContainer Name="SE_CodingProjectModelStoreContainer">
+          <EntitySet Name="LocationData" EntityType="Self.LocationData" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [LocationData].[AreaName] AS [AreaName], 
+    [LocationData].[latitude] AS [latitude], 
+    [LocationData].[longitude] AS [longitude], 
+    [LocationData].[Description] AS [Description], 
+    [LocationData].[Location] AS [Location]
+    FROM [dbo].[LocationData] AS [LocationData]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SE_CodingProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="LocationData">
+          <Key>
+            <PropertyRef Name="AreaName" />
+          </Key>
+          <Property Name="AreaName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="latitude" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="longitude" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Description" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+          <Property Name="Location" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="SE_CodingProjectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LocationDatas" EntityType="Self.LocationData" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SE_CodingProjectModelStoreContainer" CdmEntityContainer="SE_CodingProjectEntities">
+          <EntitySetMapping Name="LocationDatas">
+            <EntityTypeMapping TypeName="SE_CodingProjectModel.LocationData">
+              <MappingFragment StoreEntitySet="LocationData">
+                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+                <ScalarProperty Name="latitude" ColumnName="latitude" />
+                <ScalarProperty Name="longitude" ColumnName="longitude" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

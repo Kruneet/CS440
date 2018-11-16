@@ -19,6 +19,41 @@ namespace Water_Quality_And_Flood_Control.Controllers
             return View(db.LocationDatas.ToList());
         }
 
+        #region [Map]    
+        [HttpPost]
+        public JsonResult GetMap()
+        {
+            var data1 = Map();
+            return Json(data1, JsonRequestBehavior.AllowGet);
+        }
+        public IEnumerable<LocationData> Map()
+        {
+
+            return (from p in db.LocationDatas
+                    select new
+                    {
+                        Name = p.AreaName,
+                        Latitude = p.Latitude,
+                        Longitude = p.Longitude,
+                        Location = p.Location,
+                        Description = p.Description
+                        //Id = p.Id
+                    }).ToList()
+                .Select(res => new LocationData
+                {
+                    AreaName = res.Name,
+                    Latitude = res.Latitude,
+                    Longitude = res.Longitude,
+                    Location = res.Location,
+                    Description = res.Description
+                    //Id = res.Id
+
+
+                });
+
+        }
+        #endregion
+
         // GET: LocationDatas/Details/5
         public ActionResult Details(string id)
         {

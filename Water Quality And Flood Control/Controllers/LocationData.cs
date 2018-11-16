@@ -16,5 +16,9 @@ namespace Water_Quality_And_Flood_Control.Controllers
         public decimal Latitude { get; set; }
 
         public decimal Longitude { get; set; }
+
+        public string Location { get; set; }
+
+        public string Description { get; set; }
     }
 }
