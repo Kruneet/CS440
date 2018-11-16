@@ -71,11 +71,11 @@ namespace Water_Quality_And_Flood_Control.Controllers
                 .IsUnicode(false);
 
             modelBuilder.Entity<LocationData>()
-                .Property(e => e.latitude)
+                .Property(e => e.Latitude)
                 .HasPrecision(10, 10);
 
             modelBuilder.Entity<LocationData>()
-                .Property(e => e.longitude)
+                .Property(e => e.Longitude)
                 .HasPrecision(10, 10);
         }
     }

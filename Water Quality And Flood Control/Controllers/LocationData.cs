@@ -13,8 +13,10 @@ namespace Water_Quality_And_Flood_Control.Controllers
         [StringLength(10)]
         public string AreaName { get; set; }
 
-        public decimal? latitude { get; set; }
+        [RegularExpression(@"^\$?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9][0-9]|.)?$", ErrorMessage = "Number is invalid.")]
+        public decimal Latitude { get; set; }
 
-        public decimal? longitude { get; set; }
+        [RegularExpression(@"^\$?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9][0-9]|.)?$", ErrorMessage = "Number is invalid.")]
+        public decimal Longitude { get; set; }
     }
 }

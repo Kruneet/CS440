@@ -13,10 +13,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.latitude)
+            @Html.DisplayNameFor(model => model.Latitude)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.longitude)
+            @Html.DisplayNameFor(model => model.Longitude)
         </th>
         <th></th>
     </tr>
@@ -24,10 +24,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.latitude)
+            @Html.DisplayFor(modelItem => item.Latitude)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.longitude)
+            @Html.DisplayFor(modelItem => item.Longitude)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.AreaName }) |
