@@ -53,7 +53,18 @@ namespace Water_Quality_And_Flood_Control.Controllers
             return View(SensorInputInfo);
         }
 
-        // GET: User Interface
+        // GET: Public User Landing Page
+        public ActionResult PublicUserLandingPage()
+        {
+            return View();
+        }
+
+        // GET: Laboratory User Landing Page
+        public ActionResult LaboratoryUserLandingPage()
+        {
+            return View();
+        }
+
         public ActionResult UserInterface()
         {
             return View();

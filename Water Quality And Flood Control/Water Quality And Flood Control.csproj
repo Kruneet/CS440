@@ -252,6 +252,12 @@
     <Content Include="Views\UserDatas\Edit.cshtml" />
     <Content Include="Views\UserDatas\Index.cshtml" />
     <Content Include="Views\HomeTrial\AdminView.cshtml" />
+    <Content Include="Views\HomeTrial\LaboratoryUserLandingPage.cshtml">
+      <BrowseToURL>~/HomeTrial/LaboratoryUserLandingPage</BrowseToURL>
+    </Content>
+    <Content Include="Views\HomeTrial\PublicUserLandingPage.cshtml">
+      <BrowseToURL>~/HomeTrial/PublicUserLandingPage</BrowseToURL>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
